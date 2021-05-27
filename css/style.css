@@ -389,8 +389,48 @@ img{
       font-size: 2rem;
       padding: 20px;
 }
-
-
+.timeline__event__icon::before {
+  content: "";
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  background: var(--first-color);
+  border-radius: 100%;
+  left: -3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 2px solid var(--second-color);
+}
+.timeline__event__icon::after{
+  content: "";
+      width: 2px;
+      height: 135%;
+      background: var(--first-color);
+      position: absolute;
+      top: 60%;
+      left: -2.26rem;
+      z-index: -1;
+}
+.timeline__event__iconend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 20%;
+  font-size: 2rem;
+  padding: 20px;
+}
+.timeline__event__iconend::before {
+content: "";
+width: 1rem;
+height: 1rem;
+position: absolute;
+background: var(--first-color);
+border-radius: 100%;
+left: -2.7rem;
+top: 50%;
+transform: translateY(-50%);
+border: 2px solid var(--second-color);
+}
 /* CONTACTO */
 .contact__input{
   width: 100%;
