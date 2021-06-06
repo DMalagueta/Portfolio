@@ -86,9 +86,9 @@ img{
   position: relative;
   font-size: var(--h2-font-size);
   color: var(--first-color);
-  margin-top: var(--mb-2);
-  margin-bottom: var(--mb-4);
   text-align: center;
+  margin-top: var(--mb-3);
+  margin-bottom: var(--mb-3);
   font-family: 'Nothing You Could Do', cursive;
 }
 .section-title::after{
@@ -101,10 +101,6 @@ img{
   margin: auto;
   top: 2rem;
   background-color: var(--first-color);
-}
-.section{
-  padding-top: 3rem;
-  padding-bottom: 2rem
 }
 
 /* LAYOUT*/
@@ -222,6 +218,7 @@ img{
 	text-decoration: underline;
 	color: #6c6c6f;
 }
+/*HOME ICONS*/
 .home__social{
   display: flex;
   flex-direction: column;
@@ -235,11 +232,12 @@ img{
 .home__social-icon:hover{
   color: var(--first-color);
 }
+/* HOME IMG*/
 .home__img{
   position: absolute;
-  right: 0;
   bottom: 0;
-  width: 295px;
+  right: 0;
+  width: auto;
 }
 .home__img img{
 	border-radius: 50%;
@@ -275,67 +273,59 @@ img{
 }
 
 /* SKILLS */
+.skills{
+  height: calc(100vh - 3rem);
+  row-gap: 1rem;
+}
+
 .skills__container{
-  row-gap: 2rem;
   text-align: center;
 }
 .skills__subtitle{
-  margin-bottom: var(--mb-2);
+  text-align: center;
+  margin-top: var(--mb-3);
+  margin-bottom: var(--mb-3);
 }
 .skills__text{
-  margin-bottom: var(--mb-4);
+  margin-bottom: var(--mb-6);
 }
 .skills__data{
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
-  position: relative;
   font-weight: var(--font-semi);
-  padding: .5rem 1rem;
-  margin-bottom: var(--mb-4);
-  margin-top: var(--mb-6);
-  border-radius: .5rem;
 }
 .skills__icon{
-  font-size: 6rem;
+  font-size: 15rem;
   margin-right: var(--mb-2);
   color: var(--first-color);
 }
 .skills__icon:hover{
   color: var(--second-color);
 }
-.skills__names{
-  display: flex;
-  margin-right: var(--mb-2);
-  align-items: center;
-}
-.skills__bar{
-  position: absolute;
-  display: flex;
-  left: 0;
-  bottom: 0;
-  background-color: var(--first-color);
-  height: .25rem;
-  border-radius: .5rem;
-  z-index: var(--z-back);
-}
-.skills__html{
-  width: 95%;
-}
-.skills__css{
-  width: 85%;
-}
-.skills__js{
-  width: 65%;
-}
-.skills__ux{
-  width: 85%;
-}
+
 .skills__img{
   border-radius: .5rem;
 }
 
 /*  HISTORICO */
+.education__container{
+  row-gap: 2rem;
+}
+.education__img{
+  box-shadow: 0 4px 25px rgba(14,36,49,.15);
+  border-radius: .5rem;
+  overflow: hidden;
+}
+.education__img img{
+  transition: 1s;
+  cursor: pointer;
+}
+.education__img img:hover{
+  transform: scale(1.1);
+}
+
+/*  EXPERIENCE */
 .work__container{
   row-gap: 2rem;
 }
@@ -351,106 +341,63 @@ img{
 .work__img img:hover{
   transform: scale(1.1);
 }
+
+.timeline header{
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.timeline-item {
+  border: 1px thin black;
+}
+
+.timeline-item > header {
+  padding: 0.5em 0;
+  padding: 10px;
+}
+
+.timeline-item > p {
+  padding: 10px;
+}
+
 .timeline {
-  display: flex;
-  flex-direction: column;
-  width: 50vw;
-  margin: 5% auto;
+  position: relative;
+  padding-left: 80px;
+  margin: 100px;
 }
-.timeline__event {
-    background: #fff;
-    margin-bottom: 20px;
-    position: relative;
-    display: flex;
-    margin: 20px 0;
-    border-radius: 5px;
-    box-shadow: 0 20px 40px -12px rgba(50, 50, 93, 0.25),
-      0 18px 36px -18px rgba(0, 0, 0, 0.3),
-      0 -12px 36px -8px rgba(0, 0, 0, 0.025);
-}
-.timeline__event__title {
-      font-size: 1.2rem;
-      line-height: 1.4;
-      text-transform: uppercase;
 
-      font-weight: 600;
-      color:var(--first-color);
-      letter-spacing: 1.5px;
-  }
-.timeline__event__content {
-      padding: 20px;
-  }
-
-.timeline__event__icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-basis: 20%;
-      font-size: 2rem;
-      padding: 20px;
+.timeline .timeline-item {
+  margin-bottom: 50px;
+  font-size: 1.0rem;
 }
-.timeline__event__icon::before {
-  content: "";
-  width: 1.5rem;
-  height: 1.5rem;
+
+.timeline::before {
+  content: '';
+  background: grey;
+  display: inline-block;
   position: absolute;
-  background: var(--first-color);
-  border-radius: 100%;
-  left: -3rem;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 2px solid var(--second-color);
-}
-.timeline__event__icon::after{
-  content: "";
-      width: 2px;
-      height: 135%;
-      background: var(--first-color);
-      position: absolute;
-      top: 60%;
-      left: -2.26rem;
-      z-index: -1;
-}
-.timeline__event__iconend {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-basis: 20%;
-  font-size: 2rem;
-  padding: 20px;
-}
-.timeline__event__iconend::before {
-content: "";
-width: 1rem;
-height: 1rem;
-position: absolute;
-background: var(--first-color);
-border-radius: 100%;
-left: -2.7rem;
-top: 50%;
-transform: translateY(-50%);
-border: 2px solid var(--second-color);
-}
-/* CONTACTO */
-.contact__input{
-  width: 100%;
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-semi);
-  padding: 1rem;
-  border-radius: .5rem;
-  border: 1.5px solid var(--second-color);
-  outline: none;
-  margin-bottom: var(--mb-4);
-}
-.contact__button{
-  display: block;
-  border: none;
-  outline: none;
-  font-size: var(--normal-font-size);
-  cursor: pointer;
-  margin-left: auto;
+  left: 34px;
+  width: 1px;
+  height: 100%;
+  z-index: -1;
 }
 
+.timeline-item::before {
+  content: '';
+  background: var(--first-color);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  display: inline-block;
+  position: absolute;
+  margin-top: 25px;
+  left: 26px;
+  width: 15px;
+  height: 15px;
+  z-index: -1;
+}
+
+.timeline-item:hover::before {
+  background:white;
+}
 /* FOOTER */
 .footer{
   background-color: #a40202;
@@ -478,8 +425,10 @@ border: 2px solid var(--second-color);
     margin: 0;
   }
   .section{
-    padding-top: 12rem;
-    padding-bottom: 12rem;
+    height: calc(100vh - 3rem);
+    row-gap: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
   .section-title{
     margin-bottom: var(--mb-6);
@@ -535,11 +484,6 @@ border: 2px solid var(--second-color);
   }
   .about__img img{
     width: 300px;
-  }
-  .work__container{
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2,1fr);
-    column-gap: 2rem;
   }
   .contact__form{
     width: 360px;
