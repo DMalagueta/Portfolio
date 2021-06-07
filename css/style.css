@@ -240,7 +240,6 @@ img{
   width: auto;
 }
 .home__img img{
-	border-radius: 50%;
 	margin-bottom: 32%;
 }
 /* BUTOES */
@@ -329,17 +328,8 @@ img{
 .work__container{
   row-gap: 2rem;
 }
-.work__img{
-  box-shadow: 0 4px 25px rgba(14,36,49,.15);
-  border-radius: .5rem;
-  overflow: hidden;
-}
-.work__img img{
-  transition: 1s;
-  cursor: pointer;
-}
-.work__img img:hover{
-  transform: scale(1.1);
+.work__text{
+  text-align: center;
 }
 
 .timeline header{
