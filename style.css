@@ -89,12 +89,17 @@ section .title::after{
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: #606470;
+    background: #adadad;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.2);
 }
 .navbar .max-width{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.navbar .logo img{
+    height: 100px;
+    width: 200px;
 }
 .navbar .logo a{
     color: #fff;
@@ -121,10 +126,10 @@ section .title::after{
     transition: color 0.3s ease;
 }
 .navbar .menu li a:hover{
-    color: #606470;
+    color: #93DEFF;
 }
 .navbar.sticky .menu li a:hover{
-    color: #fff;
+    color: #93DEFF;
 }
 
 /* menu btn styling */
@@ -188,6 +193,9 @@ section .title::after{
     font-size: 75px;
     font-weight: 600;
     margin-left: -3px;
+}
+.home .home-content .text-2 span{
+    color: #93DEFF;
 }
 .home .home-content .text-3{
     font-size: 40px;
