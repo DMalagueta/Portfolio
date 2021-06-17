@@ -205,7 +205,17 @@ section .title::after{
     color: #93DEFF;
     font-weight: 500;
 }
-.home .home-content a{
+.home .home-content .social{
+    font-size: 40px;
+    margin: 50px 0;
+}
+.home .home-content .social a{
+    color: #fff;
+}
+.home .home-content .social a:hover{
+    color: #93DEFF;
+}
+.home .home-content .hireme{
     display: inline-block;
     background: #93DEFF;
     color: #fff;
@@ -217,7 +227,7 @@ section .title::after{
     border: 2px solid rgb(255, 255, 255);
     transition: all 0.3s ease;
 }
-.home .home-content a:hover{
+.home .home-content .hireme:hover{
     color: #93DEFF;
     background: none;
 }
@@ -318,17 +328,18 @@ section .title::after{
     content: "My Experience";
 }
 .work .work-content .card{
-    width: calc(30% - 20px);
-    height: 300px;
+    width: calc(70% - 10px);
     background: #222;
     color: #fff;
     text-align: center;
     border-radius: 6px;
-    padding: 40px 25px;
+    padding: 20px 20px;
     cursor: pointer;
     transition: all 0.3s ease;
+    margin: auto;
+    margin-top: 20px;
 }
-.works .work-content .card:hover{
+.work .work-content .card:hover{
     background: #93DEFF;
 }
 .work .work-content .card .box{
@@ -391,7 +402,13 @@ section .title::after{
     display: flex;
     margin-bottom: 5px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+}
+.skills .skills-content .right i{
+    font-size: 120px;
+}
+.skills .skills-content .right i:hover{
+    color:#93DEFF ;
 }
 .skills .skills-content .right span{
     font-weight: 500;
